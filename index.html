@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ECHELON, restaurante y cafetería.">
+    <title>ECHELON | Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#inicio" class="logo">
+            <img src="logo/logo.png" alt="Logo de Echelon">
+            <span>ECHELON</span>
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#carta">Carta</a>
+            <a href="#promos">Promociones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="portada">
+            <div class="portada-texto">
+                <p class="subtitulo">RESTAURANTE Y CAFETERÍA</p>
+                <h1>Sabores que<br><span>suben de nivel.</span></h1>
+                <p>Descubrí nuestra carta y disfrutá de tus platos favoritos.</p>
+                <a href="#carta" class="boton">Ver la carta</a>
+            </div>
+
+            <div class="portada-logo">
+                <img src="logo/logo.png" alt="Símbolo de Echelon">
+            </div>
+        </section>
+
+        <section id="carta" class="seccion">
+            <div class="titulo-seccion">
+                <p class="subtitulo">NUESTROS PRODUCTOS</p>
+                <h2>La carta</h2>
+                <p>Elegí una categoría para ver sus productos.</p>
+            </div>
+
+            <div class="categorias">
+                <button class="filtro activo" data-categoria="todos">Todo</button>
+                <button class="filtro" data-categoria="cafeteria">Cafetería</button>
+                <button class="filtro" data-categoria="entradas">Entradas</button>
+                <button class="filtro" data-categoria="ensaladas">Ensaladas</button>
+                <button class="filtro" data-categoria="pizzas">Pizzas</button>
+                <button class="filtro" data-categoria="platos">Platos</button>
+                <button class="filtro" data-categoria="desayunos">Desayunos</button>
+                <button class="filtro" data-categoria="panificados">Panificados</button>
+                <button class="filtro" data-categoria="panes">Entre panes</button>
+                <button class="filtro" data-categoria="burgers">Burgers</button>
+                <button class="filtro" data-categoria="bebidas">Bebidas sin alcohol</button>
+                <button class="filtro" data-categoria="cervezas">Cervezas</button>
+                <button class="filtro" data-categoria="tragos">Tragos</button>
+                <button class="filtro" data-categoria="vinos">Vinos y otros</button>
+                <button class="filtro" data-categoria="postres">Postres</button>
+            </div>
+
+            <div id="productos" class="productos" aria-live="polite"></div>
+        </section>
+
+        <section id="promos" class="seccion promociones">
+            <p class="subtitulo">PARA COMPARTIR</p>
+            <h2>Promociones</h2>
+            <div class="lista-promos">
+                <article>Infusión + 2 medialunas</article>
+                <article>Infusión + budín o alfajor de maicena</article>
+                <article>Infusión + media plancha de jamón y queso</article>
+                <article>Jugo o licuado + media plancha de jamón y queso</article>
+                <article>Pizza mozzarella + bebida</article>
+                <article>2 pintas + papa a elección</article>
+                <article>2 pintas + pizza mozzarella</article>
+                <article>3 x 2 en Gin Tonic</article>
+                <article>3 x 2 en Daiquiri, Mojito o Caipiroska</article>
+                <article>3 x 2 en Tequila</article>
+            </div>
+            <p class="aviso">Consultá en el local las condiciones y disponibilidad de las promociones.</p>
+        </section>
+
+        <section class="horarios">
+            <article>
+                <h3>Menú ejecutivo</h3>
+                <p>De lunes a sábados, de 12:00 a 15:00.</p>
+            </article>
+            <article>
+                <h3>Happy hour</h3>
+                <p>Todos los días, de 12:00 a 18:00.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer id="contacto" class="contacto">
+        <p class="subtitulo">ESTAMOS EN CONTACTO</p>
+        <h2>Contactanos</h2>
+        <p>Seguinos en nuestras redes o hacé tu pedido.</p>
+        <p>Encontranos en la calle Jorge NewBery 874 san-salvador-de-jujuy</p>
+
+        <div class="contactos">
+            <a href="https://www.facebook.com/share/1EwajDnCuR/"
+               target="_blank" rel="noopener noreferrer">Facebook</a>
+
+            <a href="https://www.instagram.com/echeloncocinabar?stkn=b2JmN29oajJxZmZ2"
+               target="_blank" rel="noopener noreferrer">Instagram</a>
+
+            <a href="https://www.pedidosya.com.ar/restaurantes/san-salvador-de-jujuy/echelon-cocina-bar-382a939f-7255-4f75-a04d-23da7e7bd00d-menu"
+               target="_blank" rel="noopener noreferrer">Pedí por PedidosYa</a>
+
+            <a href="https://wa.me/543885050849"
+               target="_blank" rel="noopener noreferrer">WhatsApp: 388 505 0849</a>
+
+            <a href="tel:03883439151">Teléfono fijo: 3439151</a>
+        </div>
+
+        <p class="derechos">© 2026 ECHELON Restaurante y Cafetería</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

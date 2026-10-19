@@ -1,0 +1,406 @@
+/* ESTILOS GENERALES */
+:root {
+    --negro: #080808;
+    --blanco: #ffffff;
+    --dorado: #d7b45a;
+    --fondo: #f5f4f0;
+    --texto: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ENCABEZADO Y NAVEGACION */
+.encabezado {
+    background: var(--blanco);
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px #00000012;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    transition: color .3s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #9d7925;
+}
+
+/* PORTADA */
+.portada {
+    min-height: 550px;
+    padding: 65px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(135deg, #fff, #eae7de);
+    overflow: hidden;
+}
+
+.portada-texto {
+    animation: aparecer 1s ease;
+}
+
+.subtitulo {
+    color: #947326;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.08;
+    color: var(--negro);
+}
+
+h1 span {
+    color: #9d7925;
+}
+
+.portada-texto > p:not(.subtitulo) {
+    margin: 20px 0 28px;
+}
+
+.portada-logo {
+    display: grid;
+    place-items: center;
+}
+
+.portada-logo img {
+    width: min(380px, 80%);
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.boton {
+    display: inline-block;
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: #9d7925;
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 80px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--negro);
+}
+
+.titulo-seccion p:last-child {
+    margin-top: 10px;
+    color: #666;
+}
+
+/* FILTROS DE LA CARTA */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filtro {
+    background: var(--blanco);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .25s;
+}
+
+.filtro:hover,
+.filtro:focus,
+.filtro.activo {
+    background: var(--negro);
+    color: var(--blanco);
+    border-color: var(--negro);
+}
+
+/* TARJETAS DE PRODUCTOS */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.producto {
+    background: var(--blanco);
+    padding: 22px;
+    border: 1px solid #e5e2da;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #00000008;
+    animation: aparecer .4s ease both;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #00000015;
+}
+
+.producto h3 {
+    color: var(--negro);
+    font-size: 17px;
+}
+
+.producto p {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* PRECIOS DESTACADOS Y EDITABLES */
+.precio {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 7px 13px;
+    border-radius: 9px;
+    background: #fff1c9;
+    color: #72530b;
+    border: 1px solid #e8cd7c;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* PROMOCIONES */
+.promociones {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+.promociones h2 {
+    color: var(--blanco);
+    margin-bottom: 25px;
+}
+
+.lista-promos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.lista-promos article {
+    background: #171717;
+    border: 1px solid #393939;
+    padding: 18px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.lista-promos article:hover {
+    border-color: var(--dorado);
+    transform: translateY(-3px);
+}
+
+.aviso {
+    color: #ccc;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* HORARIOS */
+.horarios {
+    padding: 55px 7%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.horarios article {
+    background: var(--blanco);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #e5e2da;
+}
+
+.horarios h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+/* CONTACTOS */
+.contacto {
+    padding: 60px 7%;
+    text-align: center;
+    background: #111;
+    color: var(--blanco);
+}
+
+.contacto h2 {
+    color: var(--blanco);
+}
+
+.contacto > p:not(.subtitulo, .derechos) {
+    margin: 12px 0 25px;
+}
+
+.contactos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contactos a {
+    padding: 12px 17px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.contactos a:hover,
+.contactos a:focus {
+    background: var(--dorado);
+    color: var(--negro);
+    border-color: var(--dorado);
+}
+
+.derechos {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* ANIMACIONES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ADAPTACION PARA CELULARES Y TABLETS */
+@media (max-width: 750px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .portada-logo img {
+        width: 230px;
+    }
+
+    .seccion {
+        padding: 55px 5%;
+    }
+
+    .productos,
+    .lista-promos,
+    .horarios {
+        grid-template-columns: 1fr;
+    }
+
+    .contactos {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
